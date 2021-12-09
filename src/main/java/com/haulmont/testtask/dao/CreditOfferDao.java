@@ -49,8 +49,8 @@ public class CreditOfferDao implements Dao<CreditOffer> {
         PreparedStatement statement;
         try {
             String sql = "UPDATE " + TABLE_NAME
-                    + " SET client=?, credit=?, creditAmount=?, countAmount=?, dateCreditOffer=?, datePayment=?," +
-                    "paymentAmount=?, bodyAmount=?, percentAmount? WHERE CreditOffer_Id=?";
+                    + " SET client=?, credit=?, creditAmount=?, countPayment=?, dateCreditOffer=?, datePayment=?," +
+                    "paymentAmount=?, bodyAmount=?, percentAmount=? WHERE CreditOffer_Id=?";
             statement = dbManager.getConnection().prepareStatement(sql);
             statement.setLong(1, creditOffer.getClient().getId());
             statement.setLong(2, creditOffer.getCredit().getId());
